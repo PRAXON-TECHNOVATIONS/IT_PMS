@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:PRO-INV-{YYYY}-{#####}",
  "creation": "2025-01-05 13:09:45.017711",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -750,10 +751,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-06 04:45:08.371943",
+ "modified": "2025-01-08 05:27:18.258096",
  "modified_by": "Administrator",
  "module": "It Pms",
  "name": "Proforma Invoice",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

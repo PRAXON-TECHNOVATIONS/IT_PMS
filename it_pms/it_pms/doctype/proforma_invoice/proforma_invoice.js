@@ -104,7 +104,8 @@ erpnext.selling.ProformaInvoiceController = class ProformaInvoiceController exte
       this.show_alternative_items_dialog();
     } else {
       frappe.model.open_mapped_doc({
-        method: "erpnext.selling.doctype.quotation.quotation.make_sales_order",
+        method:
+          "it_pms.it_pms.doctype.proforma_invoice.proforma_invoice.make_sales_order",
         frm: me.frm,
       });
     }

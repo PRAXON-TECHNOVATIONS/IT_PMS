@@ -43,7 +43,11 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Timesheet" : "public/js/customTimesheet.js", "Quotation" : "public/js/customQuotation.js"}
+doctype_js = {
+    "Timesheet": "public/js/customTimesheet.js",
+    "Quotation": "public/js/customQuotation.js",
+    "Sales Invoice": "public/js/customSalesInvoice.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -129,9 +133,10 @@ doctype_js = {"Timesheet" : "public/js/customTimesheet.js", "Quotation" : "publi
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Sales Order": "it_pms.public.py.customSalesOrder.customSalesOrder",
+    "Sales Invoice": "it_pms.public.py.customSalesInvoice.customSalesInvoice",
+}
 
 # Document Events
 # ---------------
@@ -174,9 +179,10 @@ doctype_js = {"Timesheet" : "public/js/customTimesheet.js", "Quotation" : "publi
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "it_pms.event.get_events"
-# }
+override_whitelisted_methods = {
+    "erpnext.selling.doctype.sales_order.sales_order.make_project": "it_pms.public.py.customSalesOrder.make_project",
+    "erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "it_pms.public.py.customSalesOrder.make_sales_invoice",
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -241,4 +247,3 @@ doctype_js = {"Timesheet" : "public/js/customTimesheet.js", "Quotation" : "publi
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
