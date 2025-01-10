@@ -47,6 +47,7 @@ doctype_js = {
     "Timesheet": "public/js/customTimesheet.js",
     "Quotation": "public/js/customQuotation.js",
     "Sales Invoice": "public/js/customSalesInvoice.js",
+    "Project": "public/js/customProject.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -136,6 +137,7 @@ doctype_js = {
 override_doctype_class = {
     "Sales Order": "it_pms.public.py.customSalesOrder.customSalesOrder",
     "Sales Invoice": "it_pms.public.py.customSalesInvoice.customSalesInvoice",
+    "Project": "it_pms.public.py.customProject.customProject",
 }
 
 # Document Events
